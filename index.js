@@ -79,7 +79,9 @@ async function startBot() {
 
     const sock = makeWASocket({
         auth: state,
-        logger: P({ level: "silent" })
+        logger: P({ level: "silent" }),
+        printQRInTerminal: true
+        
     })
 
     sock.ev.on("creds.update", saveCreds)
